@@ -1,0 +1,203 @@
+eLast login: Tue Feb 25 09:09:39 on console
+emilygeorgesmbp:~ Cameron$ git config --global user.name "Your Name Here"
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+emilygeorgesmbp:~ Cameron$ git config --global user.name "cameronamackenzie@gmail.com"
+emilygeorgesmbp:~ Cameron$ git credentialgit credential-osxkeychain
+# Test for the cred helper
+# Usage: git credential-osxkeychain <get|store|erasegit: 'credentialgit' is not a git command. See 'git --help'.
+emilygeorgesmbp:~ Cameron$ # Test for the cred helper
+emilygeorgesmbp:~ Cameron$ sudo mv git-credential-osxkeychain \
+>   "$(dirname $(which git))/git-credential-osxkeychain"
+
+WARNING: Improper use of the sudo command could lead to data loss
+or the deletion of important system files. Please double-check your
+typing when using sudo. Type "man sudo" for more information.
+
+To proceed, enter your password, or type Ctrl-C to abort.
+
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+sudo: 3 incorrect password attempts
+emilygeorgesmbp:~ Cameron$ git credential-osxkeychain
+usage: git credential-osxkeychain <get|store|erase>
+emilygeorgesmbp:~ Cameron$ git config --global credential.helper osxkeychain
+emilygeorgesmbp:~ Cameron$ git config --global credential.helper osxkeychain
+emilygeorgesmbp:~ Cameron$ sudo mv git-credential-osxkeychain \
+>   "$(dirname $(which git))/git-credential-osxkeychain"
+
+WARNING: Improper use of the sudo command could lead to data loss
+or the deletion of important system files. Please double-check your
+typing when using sudo. Type "man sudo" for more information.
+
+To proceed, enter your password, or type Ctrl-C to abort.
+
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+mv: rename git-credential-osxkeychain to /usr/bin/git-credential-osxkeychain: No such file or directory
+emilygeorgesmbp:~ Cameron$ git config --global credential.helper osxkeychain
+emilygeorgesmbp:~ Cameron$ git config --global credential.helper osxkeychain
+emilygeorgesmbp:~ Cameron$ # Set git to use the osxkeychain credential helper
+emilygeorgesmbp:~ Cameron$ https://github.com/cameronamackenzie/MEI.git
+-bash: https://github.com/cameronamackenzie/MEI.git: No such file or directory
+emilygeorgesmbp:~ Cameron$ touch README.md
+emilygeorgesmbp:~ Cameron$ git init
+Initialized empty Git repository in /Users/Cameron/.git/
+emilygeorgesmbp:~ Cameron$ git add README.md
+emilygeorgesmbp:~ Cameron$ git commit -m "first commit"
+[master (root-commit) 952e791] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+emilygeorgesmbp:~ Cameron$ git remote add origin https://github.com/cameronamackenzie/MEI.git
+emilygeorgesmbp:~ Cameron$ git st
+git: 'st' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	status
+	reset
+	stage
+	stash
+	svn
+emilygeorgesmbp:~ Cameron$ git --help
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+emilygeorgesmbp:~ Cameron$ get status
+-bash: get: command not found
+emilygeorgesmbp:~ Cameron$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.CFUserTextEncoding
+#	.Trash/
+#	.android/
+#	.bash_history
+#	.config/
+#	.gitconfig
+#	.ssh/
+#	Desktop/
+#	Documents/
+#	Downloads/
+#	Library/
+#	Movies/
+#	Music/
+#	Pictures/
+#	Public/
+#	Sites/
+nothing added to commit but untracked files present (use "git add" to track)
+emilygeorgesmbp:~ Cameron$ get status
+-bash: get: command not found
+emilygeorgesmbp:~ Cameron$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.CFUserTextEncoding
+#	.Trash/
+#	.android/
+#	.bash_history
+#	.config/
+#	.gitconfig
+#	.ssh/
+#	Desktop/
+#	Documents/
+#	Downloads/
+#	Library/
+#	Movies/
+#	Music/
+#	Pictures/
+#	Public/
+#	Sites/
+nothing added to commit but untracked files present (use "git add" to track)
+emilygeorgesmbp:~ Cameron$ get init
+-bash: get: command not found
+emilygeorgesmbp:~ Cameron$ git init
+Reinitialized existing Git repository in /Users/Cameron/.git/
+emilygeorgesmbp:~ Cameron$ ls
+Desktop		Library		Music		README.md
+Documents	MEI		Pictures	Repository 1
+Downloads	Movies		Public		Sites
+emilygeorgesmbp:~ Cameron$ Desktop
+-bash: Desktop: command not found
+emilygeorgesmbp:~ Cameron$ rails new example
+Rails is not currently installed on this system. To get the latest version, simply type:
+
+    $ sudo gem install rails
+
+You can then rerun your "rails" command.
+emilygeorgesmbp:~ Cameron$ sudo gem insall rails
+Password:
+Sorry, try again.
+Password:
+ERROR:  While executing gem ... (Gem::CommandLineError)
+    Unknown command insall
+emilygeorgesmbp:~ Cameron$ git --help
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+emilygeorgesmbp:~ Cameron$ 
